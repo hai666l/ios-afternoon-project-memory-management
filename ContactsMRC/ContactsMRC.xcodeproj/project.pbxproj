@@ -56,16 +56,24 @@
 		131E7E6624E50C3C000BC9C8 /* ContactsMRC */ = {
 			isa = PBXGroup;
 			children = (
+				131E7E7024E50C3C000BC9C8 /* Main.storyboard */,
+				131E7E8024E50CDB000BC9C8 /* Resources */,
+				131E7E7924E50C3D000BC9C8 /* main.m */,
+				131E7E7824E50C3D000BC9C8 /* Info.plist */,
+			);
+			path = ContactsMRC;
+			sourceTree = "<group>";
+		};
+		131E7E8024E50CDB000BC9C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				131E7E6724E50C3C000BC9C8 /* AppDelegate.h */,
 				131E7E6824E50C3C000BC9C8 /* AppDelegate.m */,
 				131E7E6A24E50C3C000BC9C8 /* SceneDelegate.h */,
 				131E7E6B24E50C3C000BC9C8 /* SceneDelegate.m */,
-				131E7E7024E50C3C000BC9C8 /* Main.storyboard */,
 				131E7E7324E50C3D000BC9C8 /* Assets.xcassets */,
-				131E7E7824E50C3D000BC9C8 /* Info.plist */,
-				131E7E7924E50C3D000BC9C8 /* main.m */,
 			);
-			path = ContactsMRC;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
