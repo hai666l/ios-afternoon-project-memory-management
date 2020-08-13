@@ -90,4 +90,8 @@
 }
 */
 
+- (void)dealloc {
+    [_addButton release];
+    [super dealloc];
+}
 @end

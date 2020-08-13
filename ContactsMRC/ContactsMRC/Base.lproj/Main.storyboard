@@ -23,6 +23,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="LpY-PA-2zI" kind="show" identifier="detailContactSegue" id="8e5-zu-XRx"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,7 +36,7 @@
                     <navigationItem key="navigationItem" id="uvF-c0-Pup">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f6c-o3-5a6">
                             <connections>
-                                <segue destination="LpY-PA-2zI" kind="show" id="PQa-5u-R6f"/>
+                                <segue destination="LpY-PA-2zI" kind="show" identifier="addContactSegue" id="7bh-D0-xds"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -81,8 +84,17 @@
                         <viewLayoutGuide key="safeArea" id="Ywh-kj-K7T"/>
                     </view>
                     <navigationItem key="navigationItem" id="U6J-bu-oh8">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="kUo-zC-es3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="kUo-zC-es3">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="LpY-PA-2zI" id="qrh-FJ-VkO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTF" destination="7SG-uF-y3U" id="V5s-i7-RkU"/>
+                        <outlet property="nameTF" destination="fn9-C3-mUl" id="Pht-f8-t43"/>
+                        <outlet property="phoneTF" destination="fco-Jr-hJN" id="Aqo-1s-7zc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jmn-E7-ame" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -107,4 +119,7 @@
             <point key="canvasLocation" x="57.971014492753625" y="124.55357142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8e5-zu-XRx"/>
+    </inferredMetricsTieBreakers>
 </document>
