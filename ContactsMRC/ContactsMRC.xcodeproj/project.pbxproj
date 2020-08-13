@@ -12,6 +12,8 @@
 		131E7E7224E50C3C000BC9C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 131E7E7024E50C3C000BC9C8 /* Main.storyboard */; };
 		131E7E7424E50C3D000BC9C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 131E7E7324E50C3D000BC9C8 /* Assets.xcassets */; };
 		131E7E7A24E50C3D000BC9C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 131E7E7924E50C3D000BC9C8 /* main.m */; };
+		131E7E8A24E51306000BC9C8 /* XMPContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131E7E8924E51306000BC9C8 /* XMPContactsTableViewController.m */; };
+		131E7E8D24E51325000BC9C8 /* XMPContactsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131E7E8C24E51325000BC9C8 /* XMPContactsDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		131E7E7324E50C3D000BC9C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		131E7E7824E50C3D000BC9C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		131E7E7924E50C3D000BC9C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		131E7E8824E51306000BC9C8 /* XMPContactsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMPContactsTableViewController.h; sourceTree = "<group>"; };
+		131E7E8924E51306000BC9C8 /* XMPContactsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMPContactsTableViewController.m; sourceTree = "<group>"; };
+		131E7E8B24E51325000BC9C8 /* XMPContactsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMPContactsDetailViewController.h; sourceTree = "<group>"; };
+		131E7E8C24E51325000BC9C8 /* XMPContactsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMPContactsDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		131E7E6624E50C3C000BC9C8 /* ContactsMRC */ = {
 			isa = PBXGroup;
 			children = (
+				131E7E8124E510AE000BC9C8 /* View Controllers */,
 				131E7E7024E50C3C000BC9C8 /* Main.storyboard */,
 				131E7E8024E50CDB000BC9C8 /* Resources */,
 				131E7E7924E50C3D000BC9C8 /* main.m */,
@@ -74,6 +81,17 @@
 				131E7E7324E50C3D000BC9C8 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		131E7E8124E510AE000BC9C8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				131E7E8824E51306000BC9C8 /* XMPContactsTableViewController.h */,
+				131E7E8924E51306000BC9C8 /* XMPContactsTableViewController.m */,
+				131E7E8B24E51325000BC9C8 /* XMPContactsDetailViewController.h */,
+				131E7E8C24E51325000BC9C8 /* XMPContactsDetailViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +163,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				131E7E8A24E51306000BC9C8 /* XMPContactsTableViewController.m in Sources */,
+				131E7E8D24E51325000BC9C8 /* XMPContactsDetailViewController.m in Sources */,
 				131E7E6924E50C3C000BC9C8 /* AppDelegate.m in Sources */,
 				131E7E7A24E50C3D000BC9C8 /* main.m in Sources */,
 				131E7E6C24E50C3C000BC9C8 /* SceneDelegate.m in Sources */,
