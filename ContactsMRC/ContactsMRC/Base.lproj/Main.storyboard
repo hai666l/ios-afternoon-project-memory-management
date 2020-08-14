@@ -7,16 +7,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Contacts Table View Controller-->
+        <!--Contacts-->
         <scene sceneID="tFm-5k-fZm">
             <objects>
-                <tableViewController id="Kg9-2J-7Qw" customClass="XMPContactsTableViewController" customModule="ContactsMRC" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Kg9-2J-7Qw" customClass="XMPContactsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9ee-zg-vYS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HQx-dW-Yo5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" id="HQx-dW-Yo5">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HQx-dW-Yo5" id="QBP-Uf-v3c">
@@ -24,7 +24,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="LpY-PA-2zI" kind="show" identifier="detailContactSegue" id="8e5-zu-XRx"/>
+                                    <segue destination="w1t-hG-qbf" kind="show" identifier="editContactSegue" id="5wq-Ol-tdD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -33,10 +33,10 @@
                             <outlet property="delegate" destination="Kg9-2J-7Qw" id="EqZ-eG-jZk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="uvF-c0-Pup">
+                    <navigationItem key="navigationItem" title="Contacts" id="uvF-c0-Pup">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="f6c-o3-5a6">
                             <connections>
-                                <segue destination="LpY-PA-2zI" kind="show" identifier="addContactSegue" id="7bh-D0-xds"/>
+                                <segue destination="w1t-hG-qbf" kind="show" identifier="" id="iEq-Xr-TP5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -45,29 +45,29 @@
             </objects>
             <point key="canvasLocation" x="968.11594202898561" y="124.55357142857142"/>
         </scene>
-        <!--Contacts Detail View Controller-->
-        <scene sceneID="gCx-b6-Kro">
+        <!--Contact Detail View Controller-->
+        <scene sceneID="UAX-ex-5Tg">
             <objects>
-                <viewController id="LpY-PA-2zI" customClass="XMPContactsDetailViewController" customModule="ContactsMRC" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Kn5-P7-ngU">
+                <viewController id="w1t-hG-qbf" customClass="XMPContactDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DtP-3z-kIb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9gi-et-gLh">
-                                <rect key="frame" x="20" y="108" width="374" height="142"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6RI-4d-TvI">
+                                <rect key="frame" x="20" y="140" width="374" height="122"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fn9-C3-mUl">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UAW-Sg-NkQ">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7SG-uF-y3U">
-                                        <rect key="frame" x="0.0" y="54" width="374" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8v-SW-WBc">
+                                        <rect key="frame" x="0.0" y="44" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fco-Jr-hJN">
-                                        <rect key="frame" x="0.0" y="108" width="374" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghJ-7X-SMa">
+                                        <rect key="frame" x="0.0" y="88" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -76,37 +76,37 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="9gi-et-gLh" firstAttribute="top" secondItem="Ywh-kj-K7T" secondAttribute="top" constant="20" id="0Hi-9j-zaX"/>
-                            <constraint firstItem="Ywh-kj-K7T" firstAttribute="trailing" secondItem="9gi-et-gLh" secondAttribute="trailing" constant="20" id="EsP-TJ-YSJ"/>
-                            <constraint firstItem="9gi-et-gLh" firstAttribute="centerX" secondItem="Kn5-P7-ngU" secondAttribute="centerX" id="FIK-IC-wBD"/>
-                            <constraint firstItem="9gi-et-gLh" firstAttribute="leading" secondItem="Ywh-kj-K7T" secondAttribute="leading" constant="20" id="HGl-9t-DtP"/>
+                            <constraint firstItem="6RI-4d-TvI" firstAttribute="top" secondItem="haX-aN-41d" secondAttribute="top" id="DT4-hw-6UN"/>
+                            <constraint firstItem="6RI-4d-TvI" firstAttribute="leading" secondItem="haX-aN-41d" secondAttribute="leading" constant="20" id="Met-tw-LqC"/>
+                            <constraint firstItem="haX-aN-41d" firstAttribute="trailing" secondItem="6RI-4d-TvI" secondAttribute="trailing" constant="20" id="Vqq-ZS-hHN"/>
+                            <constraint firstItem="6RI-4d-TvI" firstAttribute="centerX" secondItem="DtP-3z-kIb" secondAttribute="centerX" id="cG6-gP-PXU"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ywh-kj-K7T"/>
+                        <viewLayoutGuide key="safeArea" id="haX-aN-41d"/>
                     </view>
-                    <navigationItem key="navigationItem" id="U6J-bu-oh8">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="kUo-zC-es3">
+                    <navigationItem key="navigationItem" id="uLf-ab-iu1">
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="done" id="Dwq-gs-3nt">
                             <connections>
-                                <action selector="saveButtonTapped:" destination="LpY-PA-2zI" id="qrh-FJ-VkO"/>
+                                <action selector="saveButtonTapped:" destination="w1t-hG-qbf" id="Sv6-2w-ici"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailTF" destination="7SG-uF-y3U" id="V5s-i7-RkU"/>
-                        <outlet property="nameTF" destination="fn9-C3-mUl" id="Pht-f8-t43"/>
-                        <outlet property="phoneTF" destination="fco-Jr-hJN" id="Aqo-1s-7zc"/>
+                        <outlet property="emailTF" destination="M8v-SW-WBc" id="HKY-T2-6L7"/>
+                        <outlet property="nameTF" destination="UAW-Sg-NkQ" id="RFo-T8-jtg"/>
+                        <outlet property="phoneTF" destination="ghJ-7X-SMa" id="Msz-r7-gkG"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jmn-E7-ame" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ca-Pi-60E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1769.5652173913045" y="124.55357142857142"/>
+            <point key="canvasLocation" x="1683" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KHN-GM-Cvz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="msQ-QX-93c" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FhK-bv-BZq">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="FhK-bv-BZq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -120,6 +120,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8e5-zu-XRx"/>
+        <segue reference="5wq-Ol-tdD"/>
     </inferredMetricsTieBreakers>
 </document>

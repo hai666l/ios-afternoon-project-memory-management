@@ -1,5 +1,5 @@
 //
-//  XMPContactsDetailViewController.h
+//  XMPContactDetailViewController.h
 //  ContactsMRC
 //
 //  Created by conner on 8/11/20.
@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XMPContactsDetailViewController : UIViewController
+@interface XMPContactDetailViewController : UIViewController
+
+@property (retain, nonatomic) XMPContact *contact;
 
 @end
 
