@@ -28,12 +28,23 @@
     [super viewDidLoad];
     // Array of contacts
     _contacts = [[NSMutableArray alloc] init];
+    XMPContact* contact = [[XMPContact alloc] initWithName:@"Bob" email:@"Bob@gmail.com" phone:@"123-456-7890"];
+    XMPContact* contact2 = [[XMPContact alloc] initWithName:@"Joe" email:@"Joe@gmail.com" phone:@"922-294-9934"];
+    XMPContact* contact3 = [[XMPContact alloc] initWithName:@"Tony" email:@"Tony@gmail.com" phone:@"555-294-9585"];
+    [_contacts addObject:contact];
+    [_contacts addObject:contact2];
+    [_contacts addObject:contact3];
+    [contact release];
+    [contact2 release];
+    [contact3 release];
+    
     // Setup Observer for new contact
-    NSNotificationCenter *defaultCenter = [[NSNotificationCenter defaultCenter] init];
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
     [defaultCenter addObserver:self selector:@selector(didObserveNewContact:) name:@"didAddContact" object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
     [[self tableView] reloadData];
 }
 
@@ -72,8 +83,8 @@
 
 
 - (void)dealloc {
-    [super dealloc];
     [_contacts removeAllObjects];
     [_contacts dealloc];
+    [super dealloc];
 }
 @end

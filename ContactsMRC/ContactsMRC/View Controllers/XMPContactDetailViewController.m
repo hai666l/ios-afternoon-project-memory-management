@@ -47,6 +47,7 @@
     [_nameTF release];
     [_emailTF release];
     [_phoneTF release];
+    [_contact release];
     [super dealloc];
 }
 @end
